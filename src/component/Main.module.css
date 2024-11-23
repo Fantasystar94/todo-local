@@ -46,13 +46,13 @@
 .main .mainBox .todoLists .listsLi .content{width:280px;margin-bottom:20px;}
 .main .mainBox .todoLists .listsLi input.content{border:1px solid #0091ea;height:45px;line-height:1em;font-size:20px;text-indent:10px;}
 .main .dateWrap{display:flex;flex-direction:row;gap:0 20px;color:#fff;}
-.main .buttonWrap{display:flex;flex-direction:row;gap:0 10px;margin-top:20px;}
+.main .buttonWrap{display:flex;flex-direction:row;gap:0 10px;margin-top:20px;color:#000 !important;}
 .main .date{padding:5px;border-radius:5px;background-color:#015081;}
 .main .cate{padding:5px;border-radius:5px;background-color:#0091ea}
 .main .modi,.main .del{padding:5px;border-radius:5px;background-color:bisque;cursor: pointer;}
 .main .modalBtn{width:100%;padding:20px 0;display:flex;justify-content:flex-end;}
 .main .modalBtn .addButton{width:150px;height:60px;background-color:#0091ea;border-radius:8px;font-size:20px;color:#fff;text-align:center;}
-.select{border:1px solid #0091ea;border-radius:8px;}
+.select{border:1px solid #0091ea;border-radius:8px;width:120px;}
 @media (max-width:749px) {
   .main .modalBtn .addButton{width:100%;}
   .main{max-width:750px;width:auto;padding:0 20px;margin-bottom:50px;}
