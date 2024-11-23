@@ -5,6 +5,7 @@ import Top from './component/Top';
 import List from './component/List';
 import Main from './component/Main';
 import { Route,Routes } from 'react-router-dom';
+import Footer from './component/Footer'
 import { TodoProvider } from './contexts/TodoContext';
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
        <Top/>
        <List/>
        <Main/>
+       <Footer/>
     </TodoProvider>
   );
 }

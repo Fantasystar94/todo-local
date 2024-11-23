@@ -18,7 +18,8 @@ const Main = () => {
     setIsModalOpen(false);
   }
 
-  const todoModi = (id,content)=>{
+  const todoModi = (id,content,category)=>{
+    setCategory(category);
     setEditId(id);
     setEditContent(content); 
   }
@@ -88,7 +89,7 @@ const Main = () => {
                 <div className={styles.buttonWrap}>
 {                 editId===todo.id? <button type="button" onClick={()=>modiCompl(todo.id)} className={styles.modi}>
                     완료
-                  </button>:<button type="button" onClick={()=>todoModi(todo.id,todo.content)} className={styles.modi}>
+                  </button>:<button type="button" onClick={()=>todoModi(todo.id,todo.content,todo.category)} className={styles.modi}>
                     수정
                   </button>}
                   <button type="button" onClick={()=>todoDel(todo.id)} className={styles.del}>

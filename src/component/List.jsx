@@ -6,7 +6,6 @@ import { useTodos } from "../contexts/TodoContext";  // TodoContext에서 가져
 const List = () => {
 const {selectedCategory, setSelectedCategory} = useTodos();
 const categories = ['전체', '운동', '구매목록', '취미', '자기개발','기타'];
-console.log(selectedCategory);
 const categoryClick=(category)=>{
     setSelectedCategory(category);
 }

@@ -1,4 +1,31 @@
 /* .ListBox{display:flex;;} */
 .ListBox .lists{display:flex;flex-direction:row;align-items:center;justify-content:center;gap:0 50px;margin-top:20px;}
-.ListBox .lists li{border-radius:8px;background-color:#dbdbdb;padding:8px;cursor: pointer;}
+.ListBox .lists li{border-radius:8px;background-color:#dbdbdb;padding:8px;cursor: pointer;text-align:center;}
 .ListBox .lists li.on{color:#fff;background-color:#000;}
+@media (max-width:749px) {
+    .ListBox {
+        display: flex;
+        max-width:750px;
+        flex-wrap: wrap; /* 아이템을 여러 줄로 나눔 */
+        justify-content: center; /* 줄 바꿈 시 간격 조정 */
+        padding: 0 20px;
+        margin: 0;
+      }
+      
+    .ListBox .lists{
+        overflow:scroll;
+        gap:0 10px;
+        display: flex;
+        flex-wrap: wrap; /* 아이템을 여러 줄로 나눔 */
+        justify-content:space-between; /* 줄 바꿈 시 간격 조정 */
+    }
+    .ListBox .lists::-webkit-scrollbar{
+        display:none;
+    }
+    .ListBox .lists li{
+        padding:4px;
+        font-size:14px;
+        width:100px;
+        margin-bottom:10px;
+    }
+}

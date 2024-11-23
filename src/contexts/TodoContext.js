@@ -3,12 +3,9 @@ import React, { createContext, useReducer, useContext, useEffect, useState } fro
 // 초기 상태
 const initialState = {
   todos: [
-    { id: 1, content: "이닦기", date: "2024-11-15", category: "위생" },
-    { id: 2, content: "운동하기", date: "2024-11-16", category: "운동" },
-    { id: 3, content: "책 읽기", date: "2024-11-17", category: "자기개발" },
-    { id: 4, content: "책찢기", date: "2024-11-17", category: "자기개발" },
-    { id: 5, content: "집가기", date: "2024-11-17", category: "기타" },
-    { id: 6, content: "계란사기", date: "2024-11-18", category: "구매목록" },
+    { id: 1, content: "샘플1", date: "2024-11-15", category: "위생" },
+    { id: 2, content: "샘플2", date: "2024-11-16", category: "운동" },
+    { id: 3, content: "샘플3", date: "2024-11-17", category: "자기개발" },
   ],
 };
 
@@ -38,8 +35,13 @@ const TodoContext = createContext();
 
 // TodoProvider 컴포넌트
 export const TodoProvider = ({ children }) => {
-  const savedTodos = JSON.parse(localStorage.getItem("todolist")) || initialState.todos;
-
+  let savedTodos = [];
+  if(localStorage.getItem("todolist")){
+    savedTodos = JSON.parse(localStorage.getItem("todolist"))
+  }
+  else{
+    savedTodos = initialState.todos;
+  }
   const [state, dispatch] = useReducer(todoReducer, { todos: savedTodos });
   const [selectedCategory, setSelectedCategory] = useState(defaultCategory);
 
